@@ -1,4 +1,5 @@
 let React = require('react');
+let ReactDOM = require('react-dom');
 let d3 = require('d3');
 
 let TooltipMixin = {
@@ -27,7 +28,7 @@ let TooltipMixin = {
     },
 
     componentDidMount() {
-        this._svg_node = this.getDOMNode().getElementsByTagName("svg")[0];
+        this._svg_node = ReactDOM.getDOMNode().getElementsByTagName("svg")[0];
     },
 
     onMouseEnter(e, data) {
