@@ -1,5 +1,6 @@
 let React = require('react');
 let d3 = require('d3');
+let ReactDOMServer = require('react-dom/server');
 
 let Chart = require('./Chart');
 let Axis = require('./Axis');
@@ -58,7 +59,7 @@ let DataSet = React.createClass({
          The <rect> below is needed in case we want to show the tooltip no matter where on the chart the mouse is.
          Not sure if this should be used.
          */
-        let rect = React.renderToString(<rect width={width} height={height}/>);
+        let rect = ReactDOMServer.renderToString(<rect width={width} height={height}/>);
         return (
                 <g>
                 <g dangerouslySetInnerHTML={{__html: `<defs><clipPath id="lineClip_${sizeId}">${rect}`}}/>
