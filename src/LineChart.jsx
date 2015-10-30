@@ -196,6 +196,7 @@ let LineChart = React.createClass({
         let {height,
              width,
              margin,
+             style,
              colorScale,
              interpolate,
              defined,
@@ -248,7 +249,7 @@ let LineChart = React.createClass({
 
         return (
                 <div>
-                <Chart height={height} width={width} margin={margin}>
+                <Chart height={height} width={width} style={style} margin={margin} style={style}>
 
                 <DataSet
             height={innerHeight}

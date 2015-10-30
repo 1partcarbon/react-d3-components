@@ -4,6 +4,7 @@ let Chart = React.createClass({
     propTypes: {
         height: React.PropTypes.number.isRequired,
         width: React.PropTypes.number.isRequired,
+        style: React.PropTypes.object,
         margin: React.PropTypes.shape({
             top: React.PropTypes.number,
             bottom: React.PropTypes.number,
@@ -13,10 +14,10 @@ let Chart = React.createClass({
     },
 
     render() {
-        let {width, height, margin, viewBox, preserveAspectRatio, children} = this.props;
+        let {width, height, style, margin, viewBox, preserveAspectRatio, children} = this.props;
 
         return (
-                <svg ref="svg" width={width} height={height} viewBox={viewBox} preserveAspectRatio={preserveAspectRatio} >
+                <svg ref="svg" width={width} height={height} style={style} viewBox={viewBox} preserveAspectRatio={preserveAspectRatio} >
                 <g transform={`translate(${margin.left}, ${margin.top})`}>{children}</g>
                 </svg>
         );

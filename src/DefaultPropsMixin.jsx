@@ -9,6 +9,7 @@ let DefaultPropsMixin = {
         ]).isRequired,
         height: React.PropTypes.number.isRequired,
         width: React.PropTypes.number.isRequired,
+        style: React.PropTypes.object,
         margin: React.PropTypes.shape({
             top: React.PropTypes.number,
             bottom: React.PropTypes.number,
@@ -26,6 +27,7 @@ let DefaultPropsMixin = {
             margin: {top: 0, bottom: 0, left: 0, right: 0},
             xScale: null,
             yScale: null,
+            style: {},
             colorScale: d3.scale.category20()
         };
     }
